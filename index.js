@@ -49,5 +49,8 @@ addButton.addEventListener('click', (e) => {
     let author = document.querySelector('#author').value;
     let pages = document.querySelector('#pages').value;
 
-    addBookToLibrary(title, author, pages);
+    if(title == "" || author == "" || pages == "") {
+        alert("Please enter book info!")
+    } else addBookToLibrary(title, author, pages)
+    ;
 });
